@@ -52,14 +52,14 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 
 		$objWdForm = new wdForm();
 		$objwdForm->nome = array("required", "label|Nome Completo");
-		$objwdForm->email = array("required", "type|email", "label|E-mail", "validade"=>array("email"));
+		$objwdForm->email = array("required", "type|email", "label|E-mail", "validate"=>array("email"));
 
 
 	> Segunda forma de criar um formulário:
 
 		$form = array(
 						"nome"=>array("required", "label|Nome Completo"),
-						"email"=>array("required|Informe seu e-mail", "type|email", "label|E-mail", "validade"=>array("email")),
+						"email"=>array("required|Informe seu e-mail", "type|email", "label|E-mail", "validate"=>array("email")),
 					 );
 
 	 	$objWdForm = new wdForm( $form );
@@ -81,7 +81,7 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 
 	$objWdForm = new wdForm();
 
-	<h3>TEXT</h3>
+	>> TEXT
 		- O input text é o único input que não tem a necessidade de informar o type.
 
 		Exemplo
@@ -90,7 +90,7 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 			$objWdForm->nome = array("type|text", "label|Nome Completo");
 
 
-	<h3>PASSWORD</h3>
+	>> PASSWORD
 			$objWdForm->senha = array("type|password");
 
 	<h3>SELECT</h3>
@@ -103,24 +103,24 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 			$objWdForm->cidade = array("type|select", "value"=>mountArrayWdForm( array("Belo Horizonte", "São Paulo", "Rio de Janeiro"), "array" )); // Array contendo as informações
 
 
-	<h3>RADIO</h3>
+	>> RADIO
 			$objWdForm->genero = array("type|radio", "value"=>array("Masculino|m", "Feminino|f"), "checked|m");
 											OU
 			$objWdForm->genero = array("type|radio", "value"=>array("Masculino", "Feminino"), "checked|Masculino");
 			
 			> Também pode ser utilizado o mountArrayWdForm()
 
-	<h3>CHECKBOX</h3>
+	>> CHECKBOX
 			$objWdForm->interesses = array("type|checkbox", "value"=>array("Carro|carro", "Moto|moto", "Bike|bike"), "checked|bike");
 											OU
 			$objWdForm->interesses = array("type|checkbox", "value"=>array("Carro", "Mototo", "Bike"), "checked|Bike");
 
 			> Também pode ser utilizado o mountArrayWdForm()
 	
-	<h3>TEXTAREA</h3>
+	>> TEXTAREA
 			$objWdForm->descricao = array("type|textarea");
 
-	<h3>FILE</h3>
+	>> FILE
 			$objWdForm->foto = array("type|file", "count|5", "countrequired|3");
 
 
@@ -146,7 +146,7 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 
 ## Retornar valores do formulário ##
 	
-	- Você pode requisitar o valor de qualquer atributo do formulário, basta informa o nome do input e o valor e o atributo que deseja
+	- Você pode requisitar o valor de qualquer atributo de um input do formulário, basta informa o nome do input e o nome do atributo que deseja
 
 	Exemplo
 		- echo $objwdForm->nome_label; // Nome Completo
@@ -156,7 +156,7 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 
 			- echo $objwdForm->cidade_selected; // INPUT SELECT
 			- echo $objwdForm->interesses_checked; // INPUT RADIO ou CHECKBOX
-			- echo $objwdForm->foto_listfiles; // Retorna o nome dos arquivos, somente após realizado o UPLOAD
+			- echo $objwdForm->foto_listfiles; // INPUT FILE - Retorna o nome dos arquivos, somente após realizado o UPLOAD
 
 
 ## Gravar formulário no Banco de Dados ##
@@ -171,7 +171,7 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 		$objWdForm = new wdForm();
 		$objWdForm->db->setModel('dbUser');
 		$objwdForm->nome = array("required", "label|Nome Completo");
-		$objwdForm->email = array("required", "type|email", "label|E-mail", "validade"=>array("email"));
+		$objwdForm->email = array("required", "type|email", "label|E-mail", "validate"=>array("email"));
 		
 		// Verifica se o SUBMIT foi requisitado
 		if( $objwdForm->checkSubmit() ){
@@ -190,7 +190,7 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 		$objWdForm = new wdForm();
 		$objWdForm->db->setModel('dbUser');
 		$objwdForm->nome = array("required", "label|Nome Completo");
-		$objwdForm->email = array("required", "type|email", "label|E-mail", "validade"=>array("email"));
+		$objwdForm->email = array("required", "type|email", "label|E-mail", "validate"=>array("email"));
 		
 		// Verifica se o SUBMIT foi requisitado
 		if( $objwdForm->checkSubmit() ){
@@ -231,21 +231,76 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 				var_dump( $foto->getAllInf() ); // Informações do UPLOAD
 			}
 
+			foreach( $upload['anexo'] as $foto ){
+				echo $foto->getName(); // Nome do arquivo
+				var_dump( $foto->getAllInf() ); // Informações do UPLOAD
+			}
+
 
 		}
 
 
+## Funções de validação ##
+
+	- Você pode validar um campo de varias formas e pode existir varias formas de validação em um único INPUT
+
+	>> UNIQUE <<
+
+		- Usado em formulário que irão inserir ao alterar informações do banco de dados.
+		- Quando for realizado a requisição de INSERT ou UPDATE será verificado se o valor já existe cadastrado no banco de dados
+
+		Exemplo
+
+			$objWdForm = new wdForm();
+			$objWdForm->cpf = array("label|CPF", "unique");
+		
+
+
+	>> Validate <<
+		
+		- Usa uma function para validar o valor informado. 
+		- Você pode criar novas functions, basta abrir o arquivo 'validate.php' dentro do diretório 'helpers'
+		- Você pode adicionar quantas validações precisar.
+
+		$objWdForm = new wdForm();
+		$objWdForm->cpf = array("label|CPF", "validate"=>array("cpf")); // Em caso de erro retorna a mensagem de padrão
+					OU
+		$objWdForm->cpf = array("label|CPF", "validate"=>array("cpf"=>"Informe um cpf válido")); // Em caso de erro retorna a mensagem personalizada
+
+
+	>> Object <<
+		
+		- Usa uma objeto qualquer para validar o valor informado. 
+		- A açõa realizada deve retornar um valor boolean
+		- Você pode adicionar quantas validações precisar.
+
+		$objWdForm = new wdForm();
+		$objWdForm->cidade = array("label|CPF", "object"=>array("Cidade->verificaCidade", "Estado::verificaEstado")); // Em caso de erro retorna a mensagem de padrão
+					OU
+		$objWdForm->cidade = array("label|CPF", "object"=>array("Cidade->verificaCidade"=>"Cidade não existe", "Estado::verificaEstado"=>"Cidade não pertence ao estado")); // Em caso de erro retorna mensagem personalizada
+
+		
+
 	Observações
 
-		O input FILE possue algumas funções interessantes, que são:
+		O input FILE possui algumas funções interessantes, que são:
 
-		> count - criar um array de input file possibilitando assim o upload de vários arquivos com apenas um INPUT
+		> count - cria um array de input file possibilitando assim o upload de vários arquivos com apenas um INPUT
 		> countrequired - quantidade mínima de arquivos que devem ser anexados
 		> maxsize - tamanho máximo de cada arquivo
 		> minsize - tamanho mínimo de cada arquivo
 		> type_valid - ARRAY informa os tipos válidos para upload
 
-		Todos essas ações existem de forma default e podem ser configuradas dentro do arquivo config.php
+		>> Todos essas ações existem de forma default e podem ser configuradas dentro do arquivo config.php
+
+
+## Funções de formatação ##
+
+	- Você pode formatar um campo de varias formas e pode existir varias formas de formatação em um único INPUT
+
+	Exemplo
+		$objWdForm = new wdForm();
+		$objWdForm->username = array("label|Nome de Usuário", "format"=>array("removeCharSpecial", "removeHTML")); // Retorna os valores formatados
 
 
 
