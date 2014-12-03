@@ -7,6 +7,27 @@ por Wesley David Santos
 Twitter: <a href="http://www.twitter.com/wesley_dav">@wesley_dav</a>
 Linkedin: <a href="http://br.linkedin.com/in/wesleydavidsantos">wesleydavidsantos</a>
 
+## Solte sua imaginação ##
+
+	- Imagine um cliente lhe pedindo para criar um formulário com o layout estilizado e que será gravado no banco de dados, sendo que possui os seguintes campos:
+
+		Nome - Tipo texto
+		Email - Tipo texto e validar o email
+		Username - Tipo texto, sem acentuação ou caracteres especiais e deve ser único no banco de dados
+		Gênero - Tipo radiobutton, com os valores Masculino e Feminino
+		Interesses - Tipo checkbox, com os valores Carro - Moto - Bike		
+		Estado - Tipo select, com o valores Minas Gerais - São Paulo - Rio de Janeiro
+		Foto - Tipo file, um total de 5 fotos sendo no mínimo 3 obrigatórias devem estar no formato de JPG ou PNG e com o tamanho mínimo de 500kb e máximo de 2mb
+
+	- E ai conseguiu soltar a imaginação? Então me responda.
+
+	 * Quanto tempo você iria gastar para criar este formulário? 
+	 * Quantas linhas de código PHP, HTML e CSS você iria escrever para desenvolver este formulário?
+
+	- E se eu te falar que com apenas 13 linhas de código PHP você conseguiria fazer isso tudo. Isso ser muito bom, então veja a foto abaixo e depois continue sua leitura bem entusiasmado.
+
+	<a href="http://www.classmain.com/wdForm/layout-e-codigo-wdform.jpg"><img src="http://www.classmain.com/wdForm/layout-e-codigo-wdform.jpg" alt=""></a>
+
 
 ## Introdução ##
 Um breve resumo do que wdForm é:
@@ -441,8 +462,8 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 
 ## Se você gostou e quer dar uma força doações são bem vindas ;) ##
 
-<a href="http://www.classmain.com/doacao/paypal.html"><img src="http://www.classmain.com/doacao/doar-paypal.jpg" alt=""></a><br /><br />
-<a href="http://www.classmain.com/doacao/pagseguro.html"><img src="http://www.classmain.com/doacao/doar-pagseguro.gif" alt=""></a><br /><br />
+<a href="http://www.classmain.com/wdForm/paypal.html"><img src="http://www.classmain.com/wdForm/doar-paypal.jpg" alt=""></a><br /><br />
+<a href="http://www.classmain.com/wdForm/pagseguro.html"><img src="http://www.classmain.com/wdForm/doar-pagseguro.gif" alt=""></a><br /><br />
 <a href='https://pledgie.com/campaigns/27586'><img alt='Click here to lend your support to: wdForm - php and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/27586.png?skin_name=chrome' border='0' ></a> <br /><br />
 
 
