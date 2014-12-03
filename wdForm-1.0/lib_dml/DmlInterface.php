@@ -11,6 +11,5 @@ interface DmlInterface{
     public function update( $id );
     public function getErro();  
     public function populateForm( $id );
-    public function getObj();
     
 }

@@ -18,14 +18,6 @@ class PhpActiveRecord extends DmlAbstract implements DmlInterface{
     private $primary_key;
     
     /**
-     * Retorna o Objeto de conexão com o banco de dados
-     * @return ActiveRecord\Model
-    */
-    public function getObj(){
-        return $this->obj_active_record;
-    }
-    
-    /**
      * Verifica se um campo possui um valor que deve ser único no banco de dados
      * @param $column > Nome da coluna do banco de dados a ser verificada
      * @param $value > Valor a ser considerado como único

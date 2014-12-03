@@ -56,6 +56,15 @@ abstract class DmlAbstract{
         $this->id = '';
        
     }
+
+        
+    /**
+     * Retorna o Objeto de conexão com o banco de dados
+     * @return ActiveRecord\Model
+    */
+    public function getObj(){
+        return $this->obj_active_record;
+    }
     
     /**
      * Classe Model do banco de dados

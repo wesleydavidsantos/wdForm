@@ -4,11 +4,14 @@ Version 1.0
 
 por Wesley David Santos
 
+Twitter: <a href="http://www.twitter.com/wesley_dav">@wesley_dav</a>
+Linkedin: <a href="http://br.linkedin.com/in/wesleydavidsantos">wesleydavidsantos</a>
+
+
 ## Introdução ##
 Um breve resumo do que wdForm é:
 
-- wdForm é um framework para criação de formulários de forma prática e simples.
-- O wdForm foi desenvolvido com o foco em possibilitar a fácil criação e validação de formulários
+- wdForm é um framework desenvolvido com o foco em possibilitar a fácil criação e validação de formulários
 - O wdForm funciona seguindo a estrutura de camadas:
 
 	> Formulário
@@ -93,7 +96,7 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 	>> PASSWORD
 			$objWdForm->senha = array("type|password");
 
-	<h3>SELECT</h3>
+	>> SELECT
 			$objWdForm->cidade = array("type|select", "value"=>array("Belo Horizonte|bh", "São Paulo|sp", "Rio de Janeiro|rj"), "selected|bh");
 											OU
 			$objWdForm->cidade = array("type|select", "value"=>array("Belo Horizonte", "São Paulo", "Rio de Janeiro"), "selected|Belo Horizonte");
@@ -122,6 +125,36 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 
 	>> FILE
 			$objWdForm->foto = array("type|file", "count|5", "countrequired|3");
+
+
+## Atributos especiais ##
+
+	- Você pode criar atributos em que o seu valor pertence a um outro atributo ou a um outro input
+
+	Exemplo
+	
+		> Atribuição simples de valor
+
+			$objWdForm = new wdForm();
+			$objwdForm->senha = array("required", "label|Senha pessoal", "id|%name"); // O 'id' irá possuir o valor do atributo 'name' que é 'senha' 
+				OU
+			$objwdForm->senha = array("required", "label|Senha pessoal", "id|%label"); // O 'id' irá possuir o valor do atributo 'label' que é 'Senha pessoal' 
+
+
+		> Atribuição complexa de valor
+
+			$objWdForm = new wdForm();
+			$objWdForm->nome = array("label|Nome Completo", "id|%label");
+			$objWdForm->itens = array("label|Valor produto", "id|produto");
+			$objWdForm->qtd = array("label|Quantidade de itens", "id|qtd", "onkeyup|soma('%itens_id%', '%id%');"); 
+			$objWdForm->total = array("label|Total", "id|total");
+
+			> Explicação
+				- O primeiro parâmetro da function 'soma' recebe o valor do 'id' do input 'itens'.
+				- O segundo parâmetro da function 'soma' recebe o valor do 'id' do próprio input.
+
+
+		> Observação - O atributo que você esta buscando deve ser antes da atribuição a outro atributo
 
 
 
@@ -209,6 +242,11 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 
 		}
 		
+		
+		## Pegar o objeto usado pelo INSERT ou UPDATE ##
+		
+		$objDB = $objwdForm->db->getObj();
+
 
 ## Upload de arquivos ##
 
@@ -303,6 +341,81 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 		$objWdForm->username = array("label|Nome de Usuário", "format"=>array("removeCharSpecial", "removeHTML")); // Retorna os valores formatados
 
 
+## Limpar valore do formulário ##
+
+	- Você pode limpar os valores do formulário de 2 formas
+
+		> clearAllValues();
+			- Limpa os valores de todos os campos
+
+		> clearValue( 'nome', 'email', 'senha' );
+			- Limpa o valor dos inputs informados via parâmetro
+
+## Excluir um INPUT ##
+	
+	- Para excluir um input é só informar como parâmetro o nome do INPUT
+
+	Exemplo
+		unsetInput( 'nome', 'email' );
+
+		- Você pode passar quantos parâmetro desejar
+
+
+## Verificar erros submit ##
+	
+	- Você pode verificar se o formulário gerou erro atráves do método
+	
+		$objWdForm->existErro(); // Retorna um boolean
+
+
+	- Existem várias formas de recuperação dos erros gerados.
+
+	> Primeira forma
+		- Você pode buscar o erro de cada INPUT em separado
+
+			Exemplo
+
+				var_dump( $objWdForm->nome_erro ); // Retorna um objeto do tipo MsgErro
+
+	> Segunda forma
+
+		- Erros gerados pelos INPUTS
+
+			Exemplo
+
+				$objWdForm->getErrosInput(); // Retorna uma lista 'ul'
+
+
+	> Terceira forma
+
+		- Erros gerados pelas requisições ao banco de dados
+
+			Exemplo
+
+				$objWdForm->getErrosDml(); // Retorna uma lista 'ul',
+
+
+	> Quarta forma
+
+		- Retorna todos os erros juntos. INPUTS e Requisições ao banco de dados
+
+			Exemplo
+
+				$objWdForm->getAllErros(); // Retorna uma lista 'ul'
+
+
+
+## Modelos de Formulário ##
+
+	- Você pode criar vários modelos de layout de formulário e utiliza-los em qualquer instância do wdForm
+	- Os modelos de layout estão armazenados dentro do dirétorio 'models-form' 
+
+
+## Framework do banco de dados ##
+
+	- No momento existe apenas o framework PhpActiveRecord, você pode adicionar novos frameworks de forma simples, basta usar o atual como modelo.
+	- PhpActiveRecord - http://www.phpactiverecord.org/
+
 
 ## Observações Importantes ##
 
@@ -315,7 +428,32 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 		- $objwdForm->nome_usuario = array("required", "label|Nome Completo");
 
 
+## Vídeos de demostração ##
+
+<a href="">wdForm - Introdução</a>
+<a href="">wdForm - Criando os primeiros inputs</a>
+<a href="">wdForm - Cadastrar formulário no banco de dados</a>
+<a href="">wdForm - Preencher e update no banco de dados</a>
+<a href="">wdForm - Detalhando a estrutura do framework</a>
 
 
 
+## Se você gostou e quer dar uma força doações são bem vindas ;) ##
 
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+<form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
+<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+<input type="hidden" name="currency" value="BRL" />
+<input type="hidden" name="receiverEmail" value="wds574@gmail.com" />
+<input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/doacoes/120x53-doar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+</form>
+<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
