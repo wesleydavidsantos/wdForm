@@ -24,9 +24,9 @@ Imagine um cliente lhe pedindo para criar um formulário com o layout estilizado
  * Quanto tempo você iria gastar para criar este formulário? 
  * Quantas linhas de código PHP, HTML e CSS você iria escrever para desenvolver este formulário?
 
-- E se eu te falar que com apenas 13 linhas de código PHP você conseguiria fazer isso tudo. Isso ser muito bom, então veja a foto abaixo e depois continue sua leitura bem entusiasmado.
+- E se eu te falar que com apenas 13 linhas de código PHP você conseguiria fazer isso tudo. Séria bom demais, não é? Então veja a foto abaixo e depois continue sua leitura bem entusiasmado.
 
-<a href="http://www.classmain.com/wdForm/layout-e-codigo-wdform.jpg"><img src="http://www.classmain.com/wdForm/layout-e-codigo-wdform.jpg" alt=""></a>
+<a target="_blank" href="http://www.classmain.com/wdForm/layout-e-codigo-wdform.jpg"><img src="http://www.classmain.com/wdForm/layout-e-codigo-wdform.jpg" alt=""></a>
 
 
 ## Introdução ##
