@@ -1,0 +1,70 @@
+<?xml version='1.0' standalone='yes'?>
+<formIt>
+    <inputs>
+        
+        <email>
+            <attributes>
+                <class>form-control</class>
+            </attributes>
+            <![CDATA[
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                %input%
+            </div>
+            ]]>
+        </email>
+        
+        <password>
+            <attributes>
+                <class>form-control</class>
+            </attributes>
+            <![CDATA[
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                %input%
+            </div>
+            ]]>
+        </password>
+        
+    </inputs>
+    
+    <content>
+        <![CDATA[
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Login</h3>
+                        </div>
+                        
+                        %wdForm-form%
+                        
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-xs-10 col-sm-10 col-md-10 login-box">
+                                        %wdForm-inputs%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <button type="submit" class="btn btn-labeled btn-success pull-right">
+                                            <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Autenticar
+                                        </button>                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </form>
+                            
+                    </div>
+                </div>
+            </div>
+        ]]>
+    </content>
+    
+</formIt>

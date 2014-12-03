@@ -1,0 +1,33 @@
+<?xml version='1.0' standalone='yes'?>
+<formIt>
+    <inputs>
+    
+        <text><![CDATA[%input%]]></text>
+        
+        <select><![CDATA[%input%]]></select>
+        
+        <textarea><![CDATA[%input%]]></textarea>
+        
+        
+        <button><![CDATA[%input%]]></button>
+        
+        <radio>
+            <![CDATA[%content%]]>
+            <input><![CDATA[%input%]]></input>
+        </radio>
+        
+        <checkbox>
+            <![CDATA[%content%]]>
+            <input><![CDATA[%input%]]></input>
+        </checkbox>
+        
+    </inputs>
+    
+    <content>
+        <![CDATA[
+            %wdForm-form%
+                %wdForm-inputs%
+            </form>
+        ]]></content>
+    
+</formIt>

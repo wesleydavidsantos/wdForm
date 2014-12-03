@@ -1,0 +1,113 @@
+<?xml version='1.0' standalone='yes'?>
+<formIt>
+    <inputs>
+        
+        <inputAll>
+            <![CDATA[
+                <div %grid%>
+                    %content%
+                </div>
+            ]]>
+        </inputAll>
+        
+        <attributesAll></attributesAll>
+        
+        <text>
+            <![CDATA[
+                <label>%label%</label><br />
+                %input%
+                <span>%obs%</span>
+                <span>%erro%</span>
+            ]]>
+            
+        </text>
+        
+        <select>
+            <![CDATA[
+                <div class='col-sm-12'>
+                    <label>%label%</label><br />
+                    %input%
+                    
+                    <div class='col-sm-12'>
+                    %erro%
+                    </div>
+                </div>
+                
+            ]]>
+        </select>
+        
+        <textarea>
+            <![CDATA[
+                <label>%label%</label><br />
+                %input%
+            ]]>
+        </textarea>
+        
+        
+        <submit>
+             <attributes>
+                <class>btn btn-large btn-primary pull-right</class>
+            </attributes>
+            <![CDATA[<br />%input%]]>
+        </submit>
+        
+        <radio>
+            <![CDATA[
+                <ul class='nav'>
+                    %content%
+                </ul>
+            ]]>
+            <input>
+                <![CDATA[<li>%input% %label%</li>]]>
+            </input>
+        </radio>
+        
+        <checkbox>
+            <![CDATA[
+                <ul class='nav'>
+                    %content%
+                </ul>
+            ]]>
+            <input>
+                <![CDATA[<li>%input% %label%</li>]]>
+            </input>
+        </checkbox>
+        
+        <file>
+            <attributes>
+                <class><![CDATA[form-control input-lg]]></class>
+                <grid><![CDATA[class="col-sm-4"]]></grid>
+            </attributes>
+            
+            <![CDATA[
+                <div class='col-sm-12'>
+                    <label>%label%</label><br />
+                    %content%
+                </div>
+                <div class='col-sm-12'>
+                    %erro%
+                </div>
+            ]]>
+            
+            <input>
+                <![CDATA[
+                    <div %grid%>
+                        <div class="form-group">
+                            %input%
+                        </div>
+                    </div>
+                ]]>
+            </input>
+        </file>
+        
+    </inputs>
+    
+    <content>
+        <![CDATA[
+                %wdForm-form% %wdForm-inputs% %wdForm-button%
+                
+                </form>
+        ]]>
+    </content>
+    
+</formIt>

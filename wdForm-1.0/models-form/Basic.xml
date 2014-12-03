@@ -1,0 +1,151 @@
+<?xml version='1.0' standalone='yes'?>
+<formIt>
+    <inputs>
+        
+        <inputAll>
+            <except><![CDATA[radio,checkbox,file,submit]]></except>
+            
+            <![CDATA[
+                <div %grid%>
+                    <div class="form-group">
+                        %content%
+                    </div>
+                </div>
+            ]]>
+        </inputAll>
+        
+        <attributesAll>
+            <except><![CDATA[radio,checkbox,file,submit,button]]></except>
+            <class><![CDATA[form-control input-lg]]></class>
+        </attributesAll>
+        
+        <text>
+            <![CDATA[
+                <label>%label%</label>
+                %input%
+                <span>%obs%</span>
+                <span>%erro%</span>
+            ]]>
+            
+        </text>
+
+        <password>
+            <![CDATA[
+                <label>%label%</label>
+                %input%
+                <span>%obs%</span>
+                <span>%erro%</span>
+            ]]>
+            
+        </password>
+        
+        <select>
+            <![CDATA[
+                <label>%label%</label>
+                %input%
+                
+                <div class='col-sm-12'>
+                %erro%
+                </div>
+            ]]>
+        </select>
+        
+        <textarea>
+            <![CDATA[
+                <label>%label%</label>
+                %input%
+            ]]>
+        </textarea>
+        
+        <submit>
+             <attributes>
+                <class>btn btn-primary pull-right</class>
+            </attributes>
+            <![CDATA[%input%]]>
+        </submit>
+        
+        <button>
+             <attributes>
+                <class>btn btn-lg btn-primary</class>
+            </attributes>
+            <![CDATA[<br />%input%]]>
+        </button>
+        
+        <radio>
+            <![CDATA[
+                <ul class='nav'>
+                    <label>%label%</label>
+                    %content%
+                </ul>
+            ]]>
+
+            <input>
+                <![CDATA[<li>%input%</li>]]>
+            </input>
+        </radio>
+        
+        <checkbox>
+            <![CDATA[
+                <ul class='nav'>
+                    <label>%label%</label>
+                    %content%
+                </ul>
+            ]]>
+            <input>
+                <![CDATA[<li>%input%</li>]]>
+            </input>
+        </checkbox>
+        
+        <file>
+            <attributes>
+                <grid><![CDATA[class="col-sm-6"]]></grid>
+            </attributes>
+            
+            <![CDATA[
+                <div class='col-sm-12'>
+                    <label>%label%</label><br />
+                    %content%
+                </div>
+                <div class='col-sm-12'>
+                    %erro%
+                </div>
+            ]]>
+            
+            <input>
+                <![CDATA[
+                    <div %grid%>
+                        <div class="form-group">
+                            %input%
+                        </div>
+                    </div>
+                ]]>
+            </input>
+        </file>
+        
+    </inputs>
+    
+    <content>
+        <![CDATA[
+            <div class="container-fluid bg-menu-main">
+                <div class="container-fluid">
+                    
+                    <div class="row">
+                    
+                        %wdForm-form%
+                            
+                            %wdForm-inputs%
+                            
+                            <div class='col-sm-12'>
+                                %wdForm-button%
+                            </div>
+                            
+                        </form>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        ]]>
+    </content>
+    
+</formIt>

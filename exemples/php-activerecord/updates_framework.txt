@@ -1,0 +1,11 @@
+** Alterações realizadas por Wesley David Santos - 09/07/2014 **
+
+- Adicionado o atributo STATIC $alias_table que informa o alias a ser usada nas consultas
+- Adicionado um alias a todas as consultas SELECT
+- Adicionado métod STATIC getLastSql que permite a apresentação da última SQL usada
+
+- Classes alteradas - (Todas as alterações relizadas é informada nas classes com referência de @author)
+  - Model.php
+  - Table.php
+  - SQLBuilder.php
+  - Relationship.php
