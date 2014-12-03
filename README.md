@@ -442,7 +442,7 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 ## Se você gostou e quer dar uma força doações são bem vindas ;) ##
 
 <a href="http://www.classmain.com/doacao/paypal.html"><img src="http://www.classmain.com/doacao/doar-paypal.jpg" alt=""></a><br /><br />
-<a href="http://www.classmain.com/doacao/pagseguro.html"><img src="http://www.classmain.com/doacao/doar-pagseguro.jpg" alt=""></a><br /><br />
+<a href="http://www.classmain.com/doacao/pagseguro.html"><img src="http://www.classmain.com/doacao/doar-pagseguro.gif" alt=""></a><br /><br />
 <a href='https://pledgie.com/campaigns/27586'><img alt='Click here to lend your support to: wdForm - php and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/27586.png?skin_name=chrome' border='0' ></a> <br /><br />
 
 
