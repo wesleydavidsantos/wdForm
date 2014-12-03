@@ -154,7 +154,7 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 				- O segundo parâmetro da function 'soma' recebe o valor do 'id' do próprio input.
 
 
-		> Observação - O atributo que você esta buscando deve ser antes da atribuição a outro atributo
+		> Observação - O atributo que você esta buscando deve ser criado antes da atribuição a outro atributo
 
 
 
@@ -244,7 +244,7 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 		
 		
 		## Pegar o objeto usado pelo INSERT ou UPDATE ##
-		
+
 		$objDB = $objwdForm->db->getObj();
 
 
@@ -341,7 +341,7 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 		$objWdForm->username = array("label|Nome de Usuário", "format"=>array("removeCharSpecial", "removeHTML")); // Retorna os valores formatados
 
 
-## Limpar valore do formulário ##
+## Limpar valores do formulário ##
 
 	- Você pode limpar os valores do formulário de 2 formas
 
@@ -358,7 +358,7 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 	Exemplo
 		unsetInput( 'nome', 'email' );
 
-		- Você pode passar quantos parâmetro desejar
+		- Você pode passar quantos parâmetros desejar
 
 
 ## Verificar erros submit ##
@@ -371,7 +371,7 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 	- Existem várias formas de recuperação dos erros gerados.
 
 	> Primeira forma
-		- Você pode buscar o erro de cada INPUT em separado
+		- Você pode buscar o erro de cada INPUT
 
 			Exemplo
 
@@ -412,7 +412,8 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 
 
 ## Framework do banco de dados ##
-
+	
+	- Os arquivos DML estão localizados dentro do diretório 'lib_dml'.
 	- No momento existe apenas o framework PhpActiveRecord, você pode adicionar novos frameworks de forma simples, basta usar o atual como modelo.
 	- PhpActiveRecord - http://www.phpactiverecord.org/
 
@@ -430,15 +431,17 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 
 ## Vídeos de demostração ##
 
-<a href="">wdForm - Introdução</a>
-<a href="">wdForm - Criando os primeiros inputs</a>
-<a href="">wdForm - Cadastrar formulário no banco de dados</a>
-<a href="">wdForm - Preencher e update no banco de dados</a>
-<a href="">wdForm - Detalhando a estrutura do framework</a>
+<a href="http://youtu.be/GSt_3FoLBq4">wdForm - Introdução</a> <br /><br />
+<a href="http://youtu.be/RxI-kGYly1E">wdForm - Criando os primeiros inputs</a> <br /><br />
+<a href="http://youtu.be/hOqf7RrZ0_E">wdForm - Cadastrar formulário no banco de dados</a> <br /><br />
+<a href="http://youtu.be/QPaVmbGWMLw">wdForm - Preencher e update no banco de dados</a> <br /><br />
+<a href="">wdForm - Detalhando a estrutura do framework</a> <br /><br />
 
 
 
 ## Se você gostou e quer dar uma força doações são bem vindas ;) ##
+
+<a href='https://pledgie.com/campaigns/27586'><img alt='Click here to lend your support to: wdForm - php and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/27586.png?skin_name=chrome' border='0' ></a>
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
