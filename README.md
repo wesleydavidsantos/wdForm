@@ -8,8 +8,8 @@ Twitter: <a href="http://www.twitter.com/wesley_dav">@wesley_dav</a>
 Linkedin: <a href="http://br.linkedin.com/in/wesleydavidsantos">wesleydavidsantos</a>
 
 ## Solte sua imaginação ##
-
-	- Imagine um cliente lhe pedindo para criar um formulário com o layout estilizado e que será gravado no banco de dados, sendo que possui os seguintes campos:
+	
+	Imagine um cliente lhe pedindo para criar um formulário com o layout estilizado e que será gravado no banco de dados, sendo que possui os seguintes campos:
 
 		Nome - Tipo texto
 		Email - Tipo texto e validar o email
