@@ -26,7 +26,7 @@ Imagine um cliente lhe pedindo para criar um formulário com o layout estilizado
 
 - E se eu te falar que com apenas 13 linhas de código PHP você conseguiria fazer isso tudo. Séria bom demais, não é? Então veja a foto abaixo e depois continue sua leitura bem entusiasmado.
 
-<a target="_blank" href="http://www.classmain.com/wdForm/layout-e-codigo-wdform.jpg"><img src="http://www.classmain.com/wdForm/layout-e-codigo-wdform.jpg" alt=""></a>
+<a target="_blank" href="http://goo.gl/CCDcgS"><img src="http://www.classmain.com/wdForm/layout-e-codigo-wdform.jpg" alt=""></a>
 
 
 ## Introdução ##
@@ -462,11 +462,6 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 
 ## Se você gostou e quer dar uma força doações são bem vindas ;) ##
 
-<a href="http://www.classmain.com/wdForm/paypal.html"><img src="http://www.classmain.com/wdForm/doar-paypal.jpg" alt=""></a><br /><br />
-<a href="http://www.classmain.com/wdForm/pagseguro.html"><img src="http://www.classmain.com/wdForm/doar-pagseguro.gif" alt=""></a><br /><br />
+<a href="http://goo.gl/pkpekP"><img src="http://www.classmain.com/wdForm/doar-paypal.jpg" alt=""></a><br /><br />
+<a href="http://goo.gl/BzLLo2"><img src="http://www.classmain.com/wdForm/doar-pagseguro.gif" alt=""></a><br /><br />
 <a href='https://pledgie.com/campaigns/27586'><img alt='Click here to lend your support to: wdForm - php and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/27586.png?skin_name=chrome' border='0' ></a> <br /><br />
-
-
-
-
-
