@@ -9,24 +9,24 @@ Linkedin: <a href="http://br.linkedin.com/in/wesleydavidsantos">wesleydavidsanto
 
 ## Solte sua imaginação ##
 	
-	Imagine um cliente lhe pedindo para criar um formulário com o layout estilizado e que será gravado no banco de dados, sendo que possui os seguintes campos:
+Imagine um cliente lhe pedindo para criar um formulário com o layout estilizado e que será gravado no banco de dados, sendo que possui os seguintes campos:
 
-		Nome - Tipo texto
-		Email - Tipo texto e validar o email
-		Username - Tipo texto, sem acentuação ou caracteres especiais e deve ser único no banco de dados
-		Gênero - Tipo radiobutton, com os valores Masculino e Feminino
-		Interesses - Tipo checkbox, com os valores Carro - Moto - Bike		
-		Estado - Tipo select, com o valores Minas Gerais - São Paulo - Rio de Janeiro
-		Foto - Tipo file, um total de 5 fotos sendo no mínimo 3 obrigatórias devem estar no formato de JPG ou PNG e com o tamanho mínimo de 500kb e máximo de 2mb
+	Nome - Tipo texto
+	Email - Tipo texto e validar o email
+	Username - Tipo texto, sem acentuação ou caracteres especiais e deve ser único no banco de dados
+	Gênero - Tipo radiobutton, com os valores Masculino e Feminino
+	Interesses - Tipo checkbox, com os valores Carro - Moto - Bike		
+	Estado - Tipo select, com o valores Minas Gerais - São Paulo - Rio de Janeiro
+	Foto - Tipo file, um total de 5 fotos sendo no mínimo 3 obrigatórias devem estar no formato de JPG ou PNG e com o tamanho mínimo de 500kb e máximo de 2mb
+ 
+- E ai conseguiu soltar a imaginação? Então me responda.
 
-	- E ai conseguiu soltar a imaginação? Então me responda.
+ * Quanto tempo você iria gastar para criar este formulário? 
+ * Quantas linhas de código PHP, HTML e CSS você iria escrever para desenvolver este formulário?
 
-	 * Quanto tempo você iria gastar para criar este formulário? 
-	 * Quantas linhas de código PHP, HTML e CSS você iria escrever para desenvolver este formulário?
+- E se eu te falar que com apenas 13 linhas de código PHP você conseguiria fazer isso tudo. Isso ser muito bom, então veja a foto abaixo e depois continue sua leitura bem entusiasmado.
 
-	- E se eu te falar que com apenas 13 linhas de código PHP você conseguiria fazer isso tudo. Isso ser muito bom, então veja a foto abaixo e depois continue sua leitura bem entusiasmado.
-
-	<a href="http://www.classmain.com/wdForm/layout-e-codigo-wdform.jpg"><img src="http://www.classmain.com/wdForm/layout-e-codigo-wdform.jpg" alt=""></a>
+<a href="http://www.classmain.com/wdForm/layout-e-codigo-wdform.jpg"><img src="http://www.classmain.com/wdForm/layout-e-codigo-wdform.jpg" alt=""></a>
 
 
 ## Introdução ##
