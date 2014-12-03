@@ -441,22 +441,11 @@ A configuração é muito fácil e simples. Necesário somente requisitar a clas
 
 ## Se você gostou e quer dar uma força doações são bem vindas ;) ##
 
-<a href='https://pledgie.com/campaigns/27586'><img alt='Click here to lend your support to: wdForm - php and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/27586.png?skin_name=chrome' border='0' ></a>
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
-">
-<input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - A maneira fácil e segura de enviar pagamentos online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
-</form>
+<a href="http://www.classmain.com/doacao/paypal.html"><img src="http://www.classmain.com/doacao/doar-paypal.jpg" alt=""></a><br /><br />
+<a href="http://www.classmain.com/doacao/pagseguro.html"><img src="http://www.classmain.com/doacao/doar-pagseguro.jpg" alt=""></a><br /><br />
+<a href='https://pledgie.com/campaigns/27586'><img alt='Click here to lend your support to: wdForm - php and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/27586.png?skin_name=chrome' border='0' ></a> <br /><br />
 
 
-<!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
-<form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
-<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
-<input type="hidden" name="currency" value="BRL" />
-<input type="hidden" name="receiverEmail" value="wds574@gmail.com" />
-<input type="image" src="https://p.simg.uol.com.br/out/pagseguro/i/botoes/doacoes/120x53-doar.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
-</form>
-<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+
+
+
